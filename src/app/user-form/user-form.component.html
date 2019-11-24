@@ -1,0 +1,17 @@
+<input type="text" name="" id="" [(ngModel)]="name" #txtUserName>
+<h3 [ngStyle]="{color: 'blue'}">Your name is:{{name}}</h3>
+<code [ngClass]="{'color-text': true}">{{txtUserName.value | json}}</code>
+<div [ngClass]="['circle']"></div>
+<ul>
+    <li *ngFor="let item of listItem"><a href="#">{{item}}</a></li>
+</ul>
+<div>
+    <input type="text" placeholder="id" [(ngModel)]="newId">
+    <input type="text" placeholder="Name" [(ngModel)]="newName">
+    <input type="text" placeholder="Age" [(ngModel)]="newAge">
+    <input type="submit" (click)="addItem();">
+</div>
+<div *ngFor="let item of arrObj">
+    <h2>{{item.name}}</h2>
+    <span [ngStyle]="{color: item.age>20?'red':'blue'}">{{item.age}}</span>
+</div>
